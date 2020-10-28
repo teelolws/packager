@@ -566,7 +566,7 @@ hg) 	set_info_hg  "$topdir" ;;
 esac
 
 tag=$si_tag
-[[ -z "$tag" || "${tag,,}" == *"alpha"* ]] && alpha="true"
+alpha="true"
 project_version=$si_project_version
 previous_version=$si_previous_tag
 project_hash=$si_project_hash
