@@ -2190,15 +2190,6 @@ if [ -z "$skip_zipfile" ]; then
 		#        - If instead the tag contains the word "beta", it will be marked as a beta file.
 		# https://authors.curseforge.com/knowledge-base/projects/3451-automatic-packaging
 		file_type="alpha"
-		if [ -n "$tag" ]; then
-			if [[ "${tag,,}" == *"alpha"* ]]; then
-				file_type="alpha"
-			elif [[ "${tag,,}" == *"beta"* ]]; then
-				file_type="beta"
-			else
-				file_type="release"
-			fi
-		fi
 
 		_cf_payload=$( cat <<-EOF
 		{
